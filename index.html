@@ -50,7 +50,7 @@
     async function obterNumeros() {
       try {
         console.log('Iniciando requisição ao webhook...');
-        const response = await fetch('https://webhook.cfdojon.work/webhook/vicente', {
+        const response = await fetch('https://webhook.cfdojon.work/webhook/zapsafevicente', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json'
@@ -74,13 +74,13 @@
       try {
         const numeros = await obterNumeros();
         const numeroAleatorio = numeros[Math.floor(Math.random() * numeros.length)];
-        const url = `https://api.whatsapp.com/send?phone=${numeroAleatorio}&text=Oi,%20quero%20a%20sua%20receita!`;
+        const url = `https://api.whatsapp.com/send?phone=${numeroAleatorio}&text=Oi,%20tudo%20bem%20com%20vc%20?`;
         console.log('Redirecionando para:', url);
         window.location.href = url;
       } catch (error) {
         console.error('Erro ao obter os números ou redirecionar:', error);
         // URL de fallback em caso de erro
-        window.location.href = 'https://api.whatsapp.com/send?phone=5516992386200&text=Oi,%20tudo%20bem%20ai%20?';
+        window.location.href = 'https://api.whatsapp.com/send?phone=5516981909421&text=Oi,%20tudo%20bem%20ai%20?';
       }
     }
 
